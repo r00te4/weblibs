@@ -1,0 +1,4 @@
+# add users and grant privleges
+grant all privileges on *.* to mcl@localhost identified by 'mclpwd'
+# all ip clientes
+grant all privileges on *.* to mcl@'%' identified by 'mclpwd'
