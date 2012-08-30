@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hello Jquery</title>
+		
+
+
+		<script type='text/javascript'>
+
+/*
+function testMethod(){
+	alert("Hello function");
+	
+}
+testMethod();
+
+
+// 复杂一些的，类似于类的概念
+
+function Car(){
+	this.color="red";
+	if(typeof Car._initialized=="undefined"){ //初始化 initialized
+		Car.prototype.showColor=function(){
+			alert(this.color);
+		}
+	}
+	
+	Car._initialized=true;
+}
+*/
+
+/*
+var car=new Car();
+car.showColor();
+
+car.color="blue";
+car.showColor();
+
+alert(Car); //函数本身的值就是函数体本身
+
+car2=new Car();
+alert("运算符生成的是一个 "+typeof car2);//new 运算符生成的是一个Object
+
+*/
+
+
+//js 默认不支持函数的重载，但是可以用参数对象来伪装来实现
+
+function argMethod(){
+	alert(arguments.length);
+}		
+argMethod();
+argMethod('abc','def','zzz','ddd');
+argMethod('abc');
+		
+function myMethod(){
+	
+	if(arguments.length==0){
+		alert ("no Args");
+	}else if (arguments.length==1){
+		alert("Hello: "+argumetns[0].toString());
+	}
+	
+	alert(arguments instanceof Array);
+}
+//myMethod();
+myMethod(3); //这里貌似有点问题，没实现！！
+		</script>
+		
+    </head>
+    <body>
+        <h1>函数什么的</h1>
+		<div id="divMsg" style="border:1px dotted #3c3c3c;display:none;width:400px;">
+		Hello jQuery
+		</div>
+		
+		<div id="divResult"></div>
+		
+    </body>
+</html>
+ 

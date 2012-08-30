@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hello Jquery</title>
+		
+
+
+		<script type='text/javascript'>
+	
+function onLoad(){
+	var oHtml=document.documentElement;
+	var oBody=oHtml.lastChild;
+	var oDiv=document.createElement("div");
+	var oText=document.createTextNode("Hello Dom");
+	oDiv.appendChild(oText);
+	oBody.appendChild(oDiv);
+	
+	document.getElementById("lista").className="redClass";
+}
+	
+		</script>
+		<style type="text/css">
+			.redClass{color:red;}
+			
+		</style>
+    </head>
+    <body onload="onLoad()">
+        <h1>DOM 什么的</h1>
+		<div id="divMsg" style="border:1px dotted #3c3c3c;display:none;width:400px;">
+		Hello jQuery
+		</div>
+		
+		<div id="divResult"></div>
+		<li id="lista">hello list</li>
+		
+    </body>
+</html>
+ 
+ 

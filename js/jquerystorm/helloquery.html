@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hello Jquery</title>
+		<script type='text/javascript' src="lib/jquery.js"></script>
+		<script type='text/javascript'>
+			var oPerson={
+				name:"Mcljudge",
+				age:999,
+				school:{
+					college:"BITI",
+					"hight school":"No.18"
+				},
+				like:["mm"],
+				eat:function(){
+					alert ('what a fuck');
+				}
+				
+			}
+			
+/*			
+			var thisPage={
+				name:"ok",
+				init:function(){//function not fuction!!fuck
+					alert('wtf');
+					//this.initalizeDom();
+					//this.initalizeEvent();
+				}
+				
+	
+			}
+			*/
+		
+			var thisPage={
+				initialize:function(){ 
+				//alert("function not fuction!!");
+					this.initializeDom();
+					this.initializeEvent();		
+				},
+					initializeDom: function(){
+					//this.$btnShow=$(".btns");
+					this.$btnShow=$("#btnShow");
+//					alert(this.$btnShow.val());
+					alert("We are Init Dom..");
+				},
+				
+				
+				initializeEvent:function(){
+					alert("We are Init Event..");
+					this.$btnShow.bind("click",function(event){
+						alert("you asked for show");
+						$("#divMsg").toggle(300);
+					});
+					
+				}
+				
+				
+				
+				}
+				
+			
+				
+				
+		
+			$(function(){
+				
+				$(thisPage.initialize());
+			});
+			
+			
+		</script>
+		
+    </head>
+    <body>
+        <h1>Welcome to Jquery Storm</h1>
+		<div id="divMsg" style="border:1px dotted #3c3c3c;display:none;width:400px;">
+		Hello jQuery
+		</div>
+		
+		<div id="sbtnShow"><input type="button" id="btnShow" class="btns" value="ShowMe"></div>
+		
+    </body>
+</html>

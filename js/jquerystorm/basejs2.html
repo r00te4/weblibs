@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hello Jquery</title>
+		
+
+
+		<script type='text/javascript'>
+/*
+var iNum;
+var sNum;
+var iName,sName;
+
+var iSex="male";
+alert(iSex);
+iSex="femail";
+alert(iSex);
+iSex=99;//因为是弱类型，所以可以随时改变值的类型。
+alert(iSex)
+
+
+sName="outSide Fun";
+function test(){
+	var sName="Mcljudge"; //局部
+	//sName="Mcljudge";//全局
+}
+test();
+alert(sName);
+
+//命名规范
+//变量用凶牙利sFirstName,iSex
+//函数用Camel. function getValue();function setAge()
+
+*/
+
+
+
+/*
+function testName(){
+	var iName='my name is jim';
+	wName2="window name  2"
+	
+}
+alert("My name is "+iName);//报错，未定义undefined
+
+wName="window name is here";
+alert(window.wName);
+testName();
+alert(wName2);
+alert(window.wName2);
+
+
+*/
+
+//闭包
+function start(){
+	var count=10;
+	window.setInterval(function(){
+		document.getElementById("divResult").innerHTML+=count+"<br/>";
+		count++;
+	},3000)
+}
+
+start();
+		</script>
+		
+    </head>
+    <body>
+        <h1>变量声明什么的</h1>
+		<div id="divMsg" style="border:1px dotted #3c3c3c;display:none;width:400px;">
+		Hello jQuery
+		</div>
+		
+		<div id="divResult"></div>
+		
+    </body>
+</html>
+ 
