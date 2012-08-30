@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hello Jquery</title>
+		<script type='text/javascript' src="lib/jquery.js"></script>
+	
+		<script type='text/javascript'>
+		$(function(){
+			//$("a").attr('href','http://www.douban.com');
+			setTimeout(function(){
+				
+				this.href='http://www.douban.com';
+				$("a").click(function(event){
+					event.preventDefault();
+					alert(this.href);
+					this.href='http://www.douban.com';
+				});
+				//alert($("span[rel*='href']").html());//rel 和 ref是两回事！！
+				
+			//	alert($("img[src*=cc]").attr('src'));
+			//alert($("div[name*='C']").html()); //用选择符的时候，需要引号的！！
+				$("span[rel*='href']").click(function(event){ //^= 这个符号挺重要的
+					//alert(this.style);
+					//alert(this.atrr('data'));
+					
+					//alert(this.attr("rel"));
+					alert (this.val);
+				})
+				
+				
+				
+				
+			})
+			
+		})	
+		</script>
+		
+    </head>
+	<style type="text/css">
+
+	
+		
+	</style>
+    <body>
+        <h1>关于文档的加载顺序</h1>
+		<div id="divMsg" style="border:1px dotted #3c3c3c;display:none;width:400px;">
+		Hello jQuery
+		</div>
+		<div id="content">
+			<li><a href="http://www.badiu.com" onclick="return false">Douban</a></li>
+			<hr>
+			<li><span rel="href" data="http://www.baidus.com"><u style="cursor:hand;">Douban</span></u></li>
+		</div>
+		
+		<img src="aa.jpg" id="cc" />
+		
+		<input type="button" name="aButton" value="hello">
+		<div id="testC" name="testC">ddddddddd</div>
+    </body>
+</html>

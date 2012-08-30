@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hello Jquery</title>
+		
+
+
+		<script type='text/javascript'>
+	
+	/*
+	var oName={name:"mcl"};
+	var iName={name:"judge",sex:"male"}
+	window.name="I am a window";
+	function showName(){
+		alert(this.name);
+		}
+   oName.show=showName;//方法可以直接赋给变量的或者说对象的.
+   window.show=showName;
+   iName.show=showName;
+   
+   showName();
+   oName.show();
+   window.show();
+   iName.show();
+   
+   
+   var oName={name:'mcljudge',age:999};
+   oName.showName=function(){
+   	alert(this.name);
+	return this
+   }		
+		
+		oName.showAge=function(){
+			alert(this.age);
+			return this;
+		}
+		
+oName.showName().showAge();// 链式调用	
+
+*/
+
+function staticClass(){};
+staticClass.staticMethod=function(){alert("I'm a static Method");}
+staticClass.prototype.instanceMethod=function(){alert("I'm a instance Method");}
+staticClass.staticMethod()//静态方法直接调用。
+//staticClass.instanceMethod()//实例方法不能直接调用
+var ins=new staticClass();
+ins.instanceMethod();
+
+
+function Car(){
+	this.color="none";
+	if(typeof Car._initialized=="undefined"){
+		Car.prototype.showColor=function(){
+			alert(this.color);
+		}
+	}
+	Car._initialized=true;
+};
+
+var car=new Car();
+car.showColor();
+car.color="blue";
+car.showColor();
+
+
+//继承
+
+/*
+GoodCar.protype=new Car();
+var goodCar=new GoodCar();
+goodCar.showColor();
+*/
+function GoodCar(){
+
+}
+
+	GoodCar.prototype=new Car();
+GoodCar.prototype.run=function(){alert("run fast");}	
+var aGoodCar=new GoodCar();
+aGoodCar.run();
+aGoodCar.showColor();
+
+	
+		</script>
+		
+    </head>
+    <body>
+        <h1>this 和原型什么的</h1>
+		<div id="divMsg" style="border:1px dotted #3c3c3c;display:none;width:400px;">
+		Hello jQuery
+		</div>
+		
+		<div id="divResult"></div>
+		
+    </body>
+</html>
+ 
+ 
